@@ -1,23 +1,29 @@
 import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String nome = "Gustavo";
-        int idade = 18;
-        double renda = 1800.0;
 
-        //ESSE PRINTF VAI FORMATAR A SAÍDA DE DADOS DANDO OS DADOS SEPARADOS DE ENTRADA E,LOGO APOS, COM A ENTRADA DOS ARGUMENTOS UTILIZADOS
-        System.out.printf("O nome da pessoa é %s e essa pessoa possui %d anos de idade, com salário de %.2f reais por mês%n||", nome, idade, renda);
-
-        //O DADO LOCALE VAI LOCALIZAR O PADRÃO US NO SEU COMPUTADOR QUE ESTÁ EM PT-BR
         Locale.setDefault(Locale.US);
-       int a = 9, b = 5 , c;
-       if (a >= 5){
-        c = a + b;
-       }
-       else{
-        c = a - b;
-       }
-       System.out.println(c);
+       Scanner scanner = new Scanner(System.in);
+
+       String x;
+       int y;
+       double z;
+       char w;
+
+       x= scanner.next();
+         y= scanner.nextInt();
+            z= scanner.nextDouble();
+                w= scanner.next().charAt(0);
+        
+        System.out.println("Dados digitados: ");
+        System.out.println("Nome da pessoa: " + x);
+        System.out.println("Idade da pessoa: " + y);
+        System.out.println("Altura da pessoa é: " + z);
+        System.out.println("Sendo do sexo: " + w);
+
+       scanner.close();
+
     }
 }
